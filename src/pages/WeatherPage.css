@@ -1,0 +1,46 @@
+
+.app-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.app-header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+}
+
+.app-header p {
+  color: #cbd5e1;
+}
+
+.forecast-section h2 {
+  margin-bottom: 20px;
+}
+
+.forecast-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.error-message {
+  text-align: center;
+  color: #fca5a5;
+  margin: 24px 0;
+}
+
+@media (max-width: 800px) {
+  .forecast-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .forecast-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

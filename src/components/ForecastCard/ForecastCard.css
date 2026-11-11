@@ -1,0 +1,21 @@
+
+.forecast-card {
+  padding: 22px 16px;
+  text-align: center;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  background: #1e293b;
+}
+
+.forecast-card h4 {
+  margin-top: 0;
+  color: #cbd5e1;
+}
+
+.forecast-card strong {
+  font-size: 1.5rem;
+}
+
+.forecast-card span {
+  color: #94a3b8;
+}

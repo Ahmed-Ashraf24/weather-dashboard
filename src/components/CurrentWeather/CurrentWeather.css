@@ -1,0 +1,48 @@
+
+.current-weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 32px;
+  margin-bottom: 36px;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  background: rgba(30, 41, 59, 0.85);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.current-weather h2 {
+  margin-top: 0;
+  font-size: 1.7rem;
+}
+
+.current-weather p {
+  color: #cbd5e1;
+}
+
+.current-temperature h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.weather-details p {
+  margin: 0;
+}
+
+@media (max-width: 550px) {
+  .current-weather {
+    padding: 24px;
+  }
+
+  .current-temperature h1 {
+    font-size: 3rem;
+  }
+}
