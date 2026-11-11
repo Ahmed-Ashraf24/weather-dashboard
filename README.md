@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# Weather Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive weather dashboard built with React that allows users to search for cities around the world and view current weather conditions alongside a 5-day weather forecast.
 
-## Available Scripts
+The application integrates the Open-Meteo API to retrieve geographical information and weather data without requiring an API key.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **City Search:** Search for cities around the world.
+- **Current Weather:** Display current temperature and feels-like temperature.
+- **Weather Details:** View humidity, wind speed, and precipitation.
+- **5-Day Forecast:** Display upcoming daily weather conditions.
+- **Weather Descriptions:** Convert weather codes into readable descriptions.
+- **Default Location:** Automatically load Cairo weather when the application starts.
+- **Loading States:** Display feedback while retrieving weather data.
+- **Error Handling:** Handle unsuccessful requests and invalid city searches.
+- **Responsive Design:** Adapt to desktop and mobile screen sizes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js
+- JavaScript (ES6+)
+- CSS3
+- Open-Meteo Geocoding API
+- Open-Meteo Weather Forecast API
+- Fetch API
 
-### `npm test`
+## APIs Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Geocoding API
 
-### `npm run build`
+Used to search for cities and retrieve their geographical coordinates.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Open-Meteo Geocoding API](https://open-meteo.com/en/docs/geocoding-api)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Weather Forecast API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Used to retrieve current weather conditions and daily forecast data based on latitude and longitude.
 
-### `npm run eject`
+[Open-Meteo Weather API](https://open-meteo.com/en/docs)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```text
+src/
+├── components/
+│   ├── SearchBar/
+│   │   ├── SearchBar.jsx
+│   │   └── SearchBar.css
+│   ├── CurrentWeather/
+│   │   ├── CurrentWeather.jsx
+│   │   └── CurrentWeather.css
+│   └── ForecastCard/
+│       ├── ForecastCard.jsx
+│       └── ForecastCard.css
+├── pages/
+│   ├── WeatherPage.jsx
+│   └── WeatherPage.css
+├── services/
+│   └── weatherService.js
+├── App.js
+├── App.css
+└── index.js
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+- Node.js
+- npm
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repository:
 
-### Code Splitting
+```bash
+git clone YOUR_REPOSITORY_URL
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Navigate to the project directory:
 
-### Analyzing the Bundle Size
+```bash
+cd weather-dashboard
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Install dependencies:
 
-### Making a Progressive Web App
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. Start the development server:
 
-### Advanced Configuration
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The application will be available at:
 
-### Deployment
+```text
+http://localhost:3000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## API Integration
 
-### `npm run build` fails to minify
+The application uses a service-based approach to handle API requests:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. The user enters a city name.
+2. The Geocoding API retrieves the city's geographical coordinates.
+3. The Weather Forecast API uses those coordinates to retrieve weather information.
+4. React updates the interface with the current weather and 5-day forecast.
+
+No API key or backend configuration is required.
+
+## Future Improvements
+
+- Weather icons and improved visual representations.
+- Search history and favorite locations.
+- Hourly weather forecasts.
+- Automatic location detection.
+- Celsius/Fahrenheit temperature switching.
